@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --csc-navy: #0c2340;
+  --csc-navy-dark: #061a2e;
+  --csc-navy-light: #1a3a5c;
+  --csc-white: #ffffff;
+  --csc-off-white: #f8fafc;
+  --csc-accent: #3b82f6;
+  --csc-accent-hover: #2563eb;
+  --foreground: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--csc-off-white);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-primary), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--csc-off-white);
+  color: var(--foreground);
+  font-family: var(--font-primary), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visible for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--csc-accent);
+  outline-offset: 2px;
+}
